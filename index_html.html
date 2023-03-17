@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CLEAN HELP</title>
+    <style>
+      /* Estilos CSS */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: lightgray;
+        display: flex;
+        justify-content: space-between;
+        padding: 1em;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav a {
+        color: black;
+        display: block;
+        padding: 1em;
+        text-decoration: none;
+      }
+
+      main {
+        padding: 2em;
+      }
+
+      section {
+        margin-bottom: 2em;
+      }
+
+      footer {
+        background-color: lightgray;
+        bottom: 0;
+        padding: 1em;
+        position: fixed;
+        width: 100%;
+      }
+
+      /* Estilos CSS adicionais para melhorar a aparência */
+      #sobre h2::after,
+      #produtos h2::after,
+      #contato h2::after {
+        content: "";
+        display: block;
+        height: 3px;
+        background-color: black;
+        width: 50px;
+        margin-top: 10px;
+      }
+
+      /* Estilos CSS para a animação de explosão de partículas */
+      .explosion {
+        font-size: 3em;
+        text-align: center;
+        cursor: pointer;
+        position: relative;
+        animation: explode 1s ease-out;
+      }
+
+      @keyframes explode {
+        0% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(10);
+          opacity: 0;
+        }
+      }
+
+      .explosion span {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: #f00;
+        border-radius: 50%;
+        animation: particle 1s ease-out infinite;
+      }
+
+      @keyframes particle {
+        0% {
+          opacity: 1;
+          transform: translate(0, 0) rotate(0);
+        }
+        100% {
+          opacity: 0;
+          transform: translate(calc(var(--x) * 1px), calc(var(--y) * 1px)) rotate(calc(var(--r) * 1deg));
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#produtos">Produtos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="sobre">
+        <h2>Sobre Nós</h2>
+        <p>Somos uma empresa especializada em Serviços de limpeza de alta qualidade.</p>
+      </section>
+      <section id="produtos">
+        <h2>Nossos Produtos</h2>
+        <p>Oferecemos uma ampla variedade de produtos de limpeza para atender às suas necessidades.</p>
+      </section>
+      <section id="contato">
+        <h2>Entre em Contato</h2
